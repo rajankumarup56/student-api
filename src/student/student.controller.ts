@@ -1,4 +1,5 @@
-import { Controller, Post, Get, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, HttpCode, HttpStatus } from '@nestjs/common';
+import { CreateStudentDto } from './create-student.dto';
 import { StudentService } from './student.service';
 
 @Controller('student')
@@ -7,12 +8,13 @@ export class StudentController {
 
   // Register Route
   @Post('register')
-  register(@Body() studentData: any) {
+  register(@Body() studentData: CreateStudentDto) {
     return this.studentService.register(studentData);
   }
 
   // Login Route
   @Post('login')
+  @HttpCode(HttpStatus.OK)
   login(@Body() credentials: any) {
     return this.studentService.login(credentials);
   }
