@@ -13,7 +13,7 @@ import { Task } from './tasks/entities/task.entity';
       host: 'localhost',
       port: 5432,
       username: 'postgres',
-      password: 'Bevarc construction', // Tera local postgres password
+      password: 'Bevarc123', // Tera local postgres password
       database: 'student_db',
       entities: [Task],
       synchronize: true,

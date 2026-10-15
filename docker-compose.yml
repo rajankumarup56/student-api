@@ -6,7 +6,7 @@ services:
     container_name: postgres_container
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: Bevarc construction
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: student_db
     ports:
       - "5432:5432"
